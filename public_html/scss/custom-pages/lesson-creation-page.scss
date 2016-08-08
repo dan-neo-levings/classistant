@@ -1,0 +1,194 @@
+/*TEXT EDITOR*/
+textarea {
+  width:100%;
+  height:200px;
+  background:white;
+}
+.stage > div, .niceEdit-wrapper > div {
+  border:1px solid $brandColor !important;
+  background:white;
+}
+.stage button {
+  position:absolute;
+  left:102%;
+  padding:10px 15px;
+  top:25px;
+}
+.english-and-maths {
+  background:yellow;
+}
+.equality-and-diversity {
+  background:greenyellow;
+}
+.learning-and-progress {
+  background:cyan;
+}
+.nicEdit-panelContain {
+  background-color:$brandColor !important;
+  padding:5px;
+}
+.nicEdit-button {
+  padding:5px;
+}
+.nicEdit-button-undefined {
+  background:none !important;
+  border:none !important;
+}
+.nicEdit-main {
+  background:white;
+}
+.nicEdit-selected {
+  outline:none;
+}
+
+label {
+  display:inline-block;
+  width:175px;
+  font-size:18px;
+  margin-bottom:20px;
+  @media screen and (max-width:$largeScreen) {
+    width:135px;
+  }
+  @media screen and (max-width:$mediumScreen) {
+    width:100%;
+    margin-bottom:0px;
+  }
+}
+label[for='notes'] {
+  width:100%;
+  margin-top:20px;
+}
+.lesson-creator input, select, .search-sidebar input  {
+  width:295px;
+  height:50px;
+  border:1px solid #CCCCCC;
+  padding-left:10px;
+  margin-bottom:20px;
+  @media screen and (max-width:$largeScreen) {
+    width:260px;
+  }
+  @media screen and (max-width:$mediumScreen) {
+    width:100%;
+  }
+}
+.fa-edit, .fa-plus {
+  color:$brandColor;
+  font-size:24px;
+}
+table .fa-close {
+  color:#FF1D25;
+  font-size:24px;
+}
+table .fa-check {
+  color:#7AC943;
+  font-size:24px;
+}
+button {
+  background-color:$brandColor;
+  border:none;
+  color:white;
+  padding:5px 10px;
+}
+.edit-class-button {
+  float:right;
+  cursor:pointer;
+}
+.stage {
+  position:relative;
+  z-index:99;
+}
+.stage:nth-child(2n):before {
+  content:'';
+  position:absolute;
+  left:-20px;
+  width:200%;
+  height:100%;
+  z-index:-1;
+  background:#F2F2F2;
+}
+.download-button, .save-button {
+  padding:10px 20px;
+  background:$brandColor;
+  text-align:center;
+  margin-top:20px;
+  color:white;
+  height:42px !important;
+  width:100% !important;
+  border:none;
+  display:inline-block;
+}
+.download-button {
+  margin-top:0px;
+}
+.plus {
+  margin-top:20px;
+}
+
+/*SUGGESTION BOX*/
+
+.help-circle {
+  color:$brandColor;
+  font-size:26px;
+  position:fixed;
+  top:20px;
+  right:20px;
+}
+.add-suggestion {
+  background:white;
+  padding:10px;
+  margin:5px;
+  display:inline-block;
+  color:#2B2B2B;
+  cursor:pointer;
+  font-weight:400;
+  font-family:'Ubuntu';
+  transition:.3s all;
+  font-size:15px;
+}
+.add-suggestion.selected {
+  background:#2E89CA;
+  color:white;
+}
+.helper, .objectives-helper {
+  display:inline-block;
+  color:white;
+  background:transparent !important;
+  cursor:pointer;
+  position:relative;
+  z-index:999;
+  top:50px;
+  left:205px;
+  @media screen and (max-width:$largeScreen) {
+    left:155px;
+  }
+  @media screen and (max-width:$mediumScreen) {
+    left:230px;
+    top:30px;
+  }
+}
+.objectives-helper {
+  top:32px;
+  left:375px;
+  @media screen and (max-width:$largeScreen) {
+    left:300px;
+  }
+  @media screen and (max-width:$mediumScreen) {
+    left:240px;
+  }
+}
+
+
+
+input[name=private] {
+  width:auto;
+  height:auto;
+}
+
+.blue-button {
+  display:inline-block;
+  padding:5px 20px;
+  background:$brandColor;
+  color:white;
+  margin:5px;
+  float:right;
+}

@@ -1,0 +1,186 @@
+/*=====CLASS BOXES=====*/.class-box, .this-week-box, .class-add {
+  width: 480px;
+  height: 40px;
+  overflow: hidden;
+  background: #2e89ca;
+  margin-bottom: 10px;
+  position: relative;
+  transition: 0.4s all;
+}
+.class-box {
+  width: 100%;
+  height: 50px;
+  border-bottom: 10px solid #2e7eb7;
+}
+.class-box form {
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+.class-box input[name="class_name"], .class-box input[name="class_number"] {
+  padding: 10px;
+  width: 290px;
+  margin-left: 10px;
+}
+.class-box input[name="class_number"] {
+  width: 138px;
+}
+.class-box input[type="submit"] {
+  width: 140px;
+  float: right;
+  padding: 10px;
+  border: none;
+  margin: 10px 7px;
+  background: #7ac943;
+  color: white;
+}
+.inner-class-box {
+  padding: 15px;
+  padding-top: 10px;
+  width: 100%;
+}
+.class-name-container {
+  padding: 10px;
+  padding-bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background:#3fa9f5;
+  cursor: pointer;
+}
+.class-name-container.search {
+  height: 60px;
+}
+.class-name {
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+.topic-box, .control-button, .lesson-box, .search-lesson-box {
+  width: 440px;
+  background: white;
+  color: black;
+  margin: 5px 10px;
+  font-size: 14px;
+  color: #808080;
+  padding: 10px 15px;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.topic-box {
+  width: 100%;
+  margin-left: 0px;
+}
+.topic-box:nth-child(2n) {
+  background: #f2f2f2;
+  color: #666;
+}
+.search-lesson-box {
+  width: 400px;
+  display: inline-block;
+  margin: 0px;
+  margin-top: 5px;
+}
+.search-add {
+  background: white;
+  display: inline-block;
+  width: 40px;
+  margin-left: -4px;
+  text-align: center;
+  padding: 16px 0px 14px 0px;
+  position: relative;
+  top: -4px;
+}
+.disabled-button {
+  opacity: 0.5;
+}
+.topix-box.active, .topic-box:hover {
+  /*background:#FF931E;
+ color:white;*/
+}
+.control-button {
+  width: 128px;
+  display: inline-block;
+  margin: 0px;
+  margin-right: 6px;
+  text-align: center;
+  padding: 10px;
+  float: left;
+}
+@media screen and (max-width: 1220px) {
+  .control-button {
+    width: 119px;
+    margin-right: 6px;
+    padding: 6px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .control-button {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+}
+.delete {
+  background: #ff1d25;
+  color: white;
+  width: 42px;
+  margin-right: 0px;
+}
+@media screen and (max-width: 1220px) {
+  .delete {
+    width: 38px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .bulk-email {
+    margin-right: 0px;
+  }
+}
+.delete-link {
+  float: right;
+}
+.plus {
+  background: #7ac943;
+  padding: 10px 20px;
+}
+.controls {
+  margin-top: 20px;
+}
+.class-box-switch {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 21px;
+  color: white;
+  transition: 0.5s all;
+  pointer-events: none;
+}
+.open .class-box-switch {
+  transform: rotate(180deg);
+}
+.private-box {
+  width: 100%;
+  padding: 20px 30px;
+  background: #f2f2f2;
+}
+/*Lessons Table*/#lesson-info {
+  width: 100%;
+}
+#lesson-info th, #lesson-info td {
+  text-align: center;
+}
+#lesson-info th {
+  padding: 10px 20px;
+}
+#lesson-info td {
+  padding: 10px 20px;
+  border-right: 1px solid rgba(0, 0, 0, .05);
+}
+#lesson-info td:last-child {
+  border-right: none;
+}
+.past {
+  opacity: 0.7;
+}

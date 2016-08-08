@@ -1,0 +1,490 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500,700,400,300italic);
+/*Font imports*/* {
+  box-sizing: border-box;
+}
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+ Author's custom styles
+ ========================================================================== *//*=====LOGIN PAGE=====*/.full-background {
+  background: url('../images/background.png');
+}
+.wrapper {
+  padding-top: 120px;
+  width: 400px;
+  margin: 0 auto;
+}
+.logo {
+  text-align: center;
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+  padding-bottom: 65px;
+}
+#login-area {
+  transition: 0.8s all;
+  position: relative;
+  bottom: -100px;
+  opacity: 0;
+}
+.login-show {
+  opacity: 1 !important;
+  bottom: 0px !important;
+}
+.login-description {
+  text-align: center;
+  width: 320px;
+  margin: 0 auto;
+  display: block;
+  color: white;
+  padding-bottom: 35px;
+}
+.login-form {
+  width: 100%;
+}
+.login-form .form-group {
+  height: 80px;
+  margin-bottom: 20px;
+}
+.login-form label {
+  float: left;
+  width: 50px;
+  height: 80px;
+  background: rgba(255, 255, 255, .2);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 25px;
+}
+.login-form input {
+  width: 350px;
+  float: left;
+  height: 80px;
+  background: rgba(255, 255, 255, .1);
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, .9);
+  padding-left: 20px;
+  transition: 0.5s all;
+}
+.login-form input:focus {
+  background: rgba(255, 255, 255, .2);
+}
+.login-form input::-webkit-input-placeholder {
+  color: white;
+  font-weight: 300;
+}
+.login-form input:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+  font-weight: 300;
+}
+.login-form input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+  font-weight: 300;
+}
+.login-form input:-ms-input-placeholder {
+  color: white;
+  font-weight: 300;
+}
+.login-form input[type=submit], .error-box, .information-box, .warning-box, .success-box {
+  background: #3fa9f5;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, .2), 0px 0px 6px rgba(255, 255, 255, .2) inset;
+  text-align: center;
+  transition: 0.5s all;
+  position: relative;
+  top: 5px;
+  padding-left: 0px;
+}
+input[type=submit]:hover {
+  top: 0px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .1), 0px 0px 6px rgba(255, 255, 255, .2) inset;
+}
+input[type=submit]:active {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .3), 0px 0px 6px rgba(255, 255, 255, .2) inset;
+}
+.validation-error {
+  background: red !important;
+}
+.error-box, .success-box, .warning-box, .information-box {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  font-size: 13px;
+  padding: 13px;
+  color: white;
+  background: #ff1d25;
+  opacity: 0;
+  transition: 0.5s all;
+}
+.error-box.show, .success-box.show, .warning-box.show, .information-box.show {
+  top: 20px;
+  opacity: 1;
+}
+.success-box {
+  background: #2ecc71;
+}
+.warning-box {
+  background: #e67e22;
+}
+.information-box {
+  background: #3498db;
+}
+.login-form input[type=submit]:focus {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .3), 0px 0px 6px rgba(255, 255, 255, .2) inset;
+}
+.extra-links {
+  float: left;
+  display: block;
+  margin-top: 60px;
+  font-size: 14px;
+  color: white;
+}
+.extra-links i {
+  padding-right: 10px;
+  color: white;
+}
+.extra-links div {
+  display: inline-block;
+}
+.login-link {
+  color: rgba(255, 255, 255, .7);
+}
+.extra-links .seperator {
+  padding: 0px 18px;
+}
+.underlined-link {
+  color: white;
+  opacity: 1 !important;
+  position: relative;
+}
+.underlined-link:after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  background: white;
+  bottom: -5px;
+  width: 98%;
+  position: absolute;
+  left: 1%;
+}
+/* ==========================================================================
+ Media Queries
+ ========================================================================== *//* ==========================================================================
+ Helper classes
+ ========================================================================== */.hidden {
+  visibility: hidden;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*LOADING BAR*/.loader {
+  position: fixed;
+  top: 0px;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 75px;
+  transition: 0.3s all;
+}
+.loader.show {
+  opacity: 0.8;
+}
+.loader__bar {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 50%;
+  background: #fff;
+  transform-origin: center bottom;
+}
+.loader__bar:nth-child(1) {
+  left: 0px;
+  transform: scale(1, 0.2);
+  animation: barUp1 4s infinite;
+}
+.loader__bar:nth-child(2) {
+  left: 15px;
+  transform: scale(1, 0.4);
+  animation: barUp2 4s infinite;
+}
+.loader__bar:nth-child(3) {
+  left: 30px;
+  transform: scale(1, 0.6);
+  animation: barUp3 4s infinite;
+}
+.loader__bar:nth-child(4) {
+  left: 45px;
+  transform: scale(1, 0.8);
+  animation: barUp4 4s infinite;
+}
+.loader__bar:nth-child(5) {
+  left: 60px;
+  transform: scale(1, 1);
+  animation: barUp5 4s infinite;
+}
+.loader__ball {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  animation: ball 4s infinite;
+}
+@keyframes ball {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(8px, -14px);
+  }
+  10% {
+    transform: translate(15px, -10px);
+  }
+  17% {
+    transform: translate(23px, -24px);
+  }
+  20% {
+    transform: translate(30px, -20px);
+  }
+  27% {
+    transform: translate(38px, -34px);
+  }
+  30% {
+    transform: translate(45px, -30px);
+  }
+  37% {
+    transform: translate(53px, -44px);
+  }
+  40% {
+    transform: translate(60px, -40px);
+  }
+  50% {
+    transform: translate(60px, 0);
+  }
+  57% {
+    transform: translate(53px, -14px);
+  }
+  60% {
+    transform: translate(45px, -10px);
+  }
+  67% {
+    transform: translate(37px, -24px);
+  }
+  70% {
+    transform: translate(30px, -20px);
+  }
+  77% {
+    transform: translate(22px, -34px);
+  }
+  80% {
+    transform: translate(15px, -30px);
+  }
+  87% {
+    transform: translate(7px, -44px);
+  }
+  90% {
+    transform: translate(0, -40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes barUp1 {
+  0% {
+    transform: scale(1, 0.2);
+  }
+  40% {
+    transform: scale(1, 0.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 0.2);
+  }
+}
+@keyframes barUp2 {
+  0% {
+    transform: scale(1, 0.4);
+  }
+  40% {
+    transform: scale(1, 0.4);
+  }
+  50% {
+    transform: scale(1, 0.8);
+  }
+  90% {
+    transform: scale(1, 0.8);
+  }
+  100% {
+    transform: scale(1, 0.4);
+  }
+}
+@keyframes barUp3 {
+  0% {
+    transform: scale(1, 0.6);
+  }
+  100% {
+    transform: scale(1, 0.6);
+  }
+}
+@keyframes barUp4 {
+  0% {
+    transform: scale(1, 0.8);
+  }
+  40% {
+    transform: scale(1, 0.8);
+  }
+  50% {
+    transform: scale(1, 0.4);
+  }
+  90% {
+    transform: scale(1, 0.4);
+  }
+  100% {
+    transform: scale(1, 0.8);
+  }
+}
+@keyframes barUp5 {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.2);
+  }
+  90% {
+    transform: scale(1, 0.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* ==========================================================================
+ Print styles
+ ========================================================================== */@media print {
+  *, *:before, *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after, a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

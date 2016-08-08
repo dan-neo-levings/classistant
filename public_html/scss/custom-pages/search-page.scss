@@ -1,0 +1,38 @@
+/*SEARCH PAGE*/
+.search-box, .this-week-box {
+  height:60px;
+}
+.written-by {
+  font-size:11px;
+  color:white;
+  opacity:.7;
+  padding-bottom:20px;
+}
+.search-unit {
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+.search-box-switch {
+  top:20px;
+}
+.search-class {
+  font-size:12px;
+  opacity:.8;
+}
+.search-date {
+  font-size:12px;
+  opacity:.8;
+  float:right;
+  margin-top:-15px;
+}
+#search-bar {
+  width:100%;
+  height:50px;
+  border:1px solid #CCCCCC;
+  padding-left:20px;
+  margin-bottom:20px;
+}
+#search-bar:active {
+  border:1px solid $brandColor;
+}

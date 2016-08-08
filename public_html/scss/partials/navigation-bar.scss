@@ -1,0 +1,126 @@
+/*=====NAVIGATION BAR=====*/
+
+nav {
+  transition:.5s all;
+  z-index:999;
+  position: fixed;
+  width: 120px;
+  height: 100%;
+  background: url('../images/background.png');
+  color: white;
+  .small-logo {
+    display: inline-block;
+    padding: 15px 28px;
+  }
+  .welcome {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 120px;
+    @media screen and (max-height:800px) {
+      margin-bottom:40px;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 20px 0px;
+      width: 100%;
+      text-align: center;
+      transition: .5s all;
+      position: relative;
+      cursor: pointer;
+      i {
+        padding-bottom: 2px;
+        @media screen and (max-height: 680px) {
+          display: none !important;
+        }
+      }
+      .nav-text {
+        font-size: 14px;
+        display:inline-block;
+        width: 100%;
+      }
+      &:before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: white;
+        content: '';
+        top: 0px;
+        left: -100%;
+        transition: .5s all;
+        z-index: 0;
+      }
+      &:hover:before,
+      &.active:before{
+        left:0%;
+      }
+      &:hover,
+      &.active {
+        color: $brandColor !important;
+      }
+      a {
+        position:relative;
+        z-index:99;
+      }
+    }
+  }
+
+  @media screen and (max-width:540px) {
+    left:-100%;
+    opacity:0;
+    box-shadow:50px 0px 100px rgba(0,0,0,.5);
+  }
+}
+.responsive-button {
+  display:none;
+  position:fixed;
+  top:20px;
+  left:20px;
+  cursor: pointer;
+  @media screen and (max-width:540px) {
+    display:inline-block;
+  }
+  i {
+    color:#31b0d5;
+    font-size:18px;
+  }
+}
+.responsive-close-button {
+  display:none;
+  position:absolute;
+  top:20px;
+  left:140px;
+  cursor: pointer;
+  @media screen and (max-width:540px) {
+    display:inline-block;
+  }
+  i {
+    color:white;
+    font-size:24px;
+  }
+}
+
+
+/*FOOTER STYLES*/
+footer {
+  text-align:center;
+  display:block;
+  margin:0 auto;
+  width:90%;
+  font-size:14px;
+  padding-top:100px;
+}
+.footer-link, .created-by {
+  padding-top:20px;
+  display:inline-block;
+
+}
+.created-by {
+  font-size:12px;
+  padding-top:60px;
+  @media screen and (max-height:550px) {
+    padding-top:20px !important;
+  }
+}

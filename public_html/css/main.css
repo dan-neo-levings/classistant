@@ -1,0 +1,802 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500,700,400,300italic);
+/*Font imports*//*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */* {
+  box-sizing: border-box;
+}
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+ Author's custom styles
+ ========================================================================== *//*=====NAVIGATION BAR=====*/nav {
+  transition: 0.5s all;
+  z-index: 999;
+  position: fixed;
+  width: 120px;
+  height: 100%;
+  background: url('../images/background.png');
+  color: white;
+}
+nav .small-logo {
+  display: inline-block;
+  padding: 15px 28px;
+}
+nav .welcome {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 120px;
+}
+@media screen and (max-height: 800px) {
+  nav .welcome {
+    margin-bottom: 40px;
+  }
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  padding: 20px 0px;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s all;
+  position: relative;
+  cursor: pointer;
+}
+nav ul li i {
+  padding-bottom: 2px;
+}
+@media screen and (max-height: 680px) {
+  nav ul li i {
+    display: none !important;
+  }
+}
+nav ul li .nav-text {
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+}
+nav ul li:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+  content: '';
+  top: 0px;
+  left: -100%;
+  transition: 0.5s all;
+  z-index: 0;
+}
+nav ul li:hover:before, nav ul li.active:before {
+  left: 0%;
+}
+nav ul li:hover, nav ul li.active {
+  color: #3fa9f5 !important;
+}
+nav ul li a {
+  position: relative;
+  z-index: 99;
+}
+@media screen and (max-width: 540px) {
+  nav {
+    left: -100%;
+    opacity: 0;
+    box-shadow: 50px 0px 100px rgba(0, 0, 0, .5);
+  }
+}
+.responsive-button {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 540px) {
+  .responsive-button {
+    display: inline-block;
+  }
+}
+.responsive-button i {
+  color: #31b0d5;
+  font-size: 18px;
+}
+.responsive-close-button {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 140px;
+  cursor: pointer;
+}
+@media screen and (max-width: 540px) {
+  .responsive-close-button {
+    display: inline-block;
+  }
+}
+.responsive-close-button i {
+  color: white;
+  font-size: 24px;
+}
+/*FOOTER STYLES*/footer {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 14px;
+  padding-top: 100px;
+}
+.footer-link, .created-by {
+  padding-top: 20px;
+  display: inline-block;
+}
+.created-by {
+  font-size: 12px;
+  padding-top: 60px;
+}
+@media screen and (max-height: 550px) {
+  .created-by {
+    padding-top: 20px !important;
+  }
+}
+/*=====SIDEBARS=====*/section.sidebar {
+  width: 480px;
+  float: left;
+  margin-left: 60px;
+}
+@media screen and (max-width: 1220px) {
+  section.sidebar {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  section.sidebar {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 940px) {
+  section.sidebar {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 540px) {
+  section.sidebar {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+main {
+  width: 100%;
+  padding-top: 40px;
+  margin-left: 120px;
+}
+@media screen and (max-width: 540px) {
+  main {
+    padding-top: 0px;
+    padding-left: 60px;
+    margin-left: 0px;
+    padding-right: 20px;
+  }
+}
+section.sidebar h1, h2 {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #666;
+  display: inline-block;
+  border-bottom: 1px solid #666;
+}
+h2 {
+  margin-bottom: 0px;
+  margin-top: 15px;
+  border-bottom: none;
+  font-size: 21px;
+}
+.introjs-tooltiptext h2 {
+  margin-bottom: -5px;
+  margin-top: 0px;
+}
+.dashboard-lesson {
+  background: #3fa9f5;
+  width: 100%;
+  height: 40px;
+  color: white;
+  margin-bottom: 10px;
+}
+.dashboard-lesson-class {
+  font-size: 18px;
+  padding: 6px 10px;
+  font-weight: 500;
+  display: inline-block;
+  float: left;
+}
+.dashboard-lesson-topic {
+  font-size: 14px;
+  opacity: 0.6;
+  padding-top: 10px;
+  float: left;
+}
+.dashboard-lesson-time {
+  float: right;
+  padding: 7px 10px;
+}
+/*=====CLASS BOXES=====*/.class-box, .this-week-box, .class-add {
+  width: 480px;
+  height: 40px;
+  overflow: hidden;
+  background: #2e89ca;
+  margin-bottom: 10px;
+  position: relative;
+  transition: 0.4s all;
+}
+.class-box {
+  width: 100%;
+  height: 50px;
+  border-bottom: 10px solid #2e7eb7;
+}
+.class-box form {
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+.class-box input[name="class_name"], .class-box input[name="class_number"] {
+  padding: 10px;
+  width: 290px;
+  margin-left: 10px;
+}
+.class-box input[name="class_number"] {
+  width: 138px;
+}
+.class-box input[type="submit"] {
+  width: 140px;
+  float: right;
+  padding: 10px;
+  border: none;
+  margin: 10px 7px;
+  background: #7ac943;
+  color: white;
+}
+.inner-class-box {
+  padding: 15px;
+  padding-top: 10px;
+  width: 100%;
+}
+.class-name-container {
+  padding: 10px;
+  padding-bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background: #3fa9f5;
+  cursor: pointer;
+}
+.class-name-container.search {
+  height: 60px;
+}
+.class-name {
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+.topic-box, .control-button, .lesson-box, .search-lesson-box {
+  width: 440px;
+  background: white;
+  color: black;
+  margin: 5px 10px;
+  font-size: 14px;
+  color: #808080;
+  padding: 10px 15px;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.topic-box {
+  width: 100%;
+  margin-left: 0px;
+}
+.topic-box:nth-child(2n) {
+  background: #f2f2f2;
+  color: #666;
+}
+.search-lesson-box {
+  width: 400px;
+  display: inline-block;
+  margin: 0px;
+  margin-top: 5px;
+}
+.search-add {
+  background: white;
+  display: inline-block;
+  width: 40px;
+  margin-left: -4px;
+  text-align: center;
+  padding: 16px 0px 14px 0px;
+  position: relative;
+  top: -4px;
+}
+.disabled-button {
+  opacity: 0.5;
+}
+.topix-box.active, .topic-box:hover {
+  /*background:#FF931E;
+ color:white;*/
+}
+.control-button {
+  width: 128px;
+  display: inline-block;
+  margin: 0px;
+  margin-right: 6px;
+  text-align: center;
+  padding: 10px;
+  float: left;
+}
+@media screen and (max-width: 1220px) {
+  .control-button {
+    width: 119px;
+    margin-right: 6px;
+    padding: 6px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .control-button {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+}
+.delete {
+  background: #ff1d25;
+  color: white;
+  width: 42px;
+  margin-right: 0px;
+}
+@media screen and (max-width: 1220px) {
+  .delete {
+    width: 38px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .bulk-email {
+    margin-right: 0px;
+  }
+}
+.delete-link {
+  float: right;
+}
+.plus {
+  background: #7ac943;
+  padding: 10px 20px;
+}
+.controls {
+  margin-top: 20px;
+}
+.class-box-switch {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 21px;
+  color: white;
+  transition: 0.5s all;
+  pointer-events: none;
+}
+.open .class-box-switch {
+  transform: rotate(180deg);
+}
+.private-box {
+  width: 100%;
+  padding: 20px 30px;
+  background: #f2f2f2;
+}
+/*Lessons Table*/#lesson-info {
+  width: 100%;
+}
+#lesson-info th, #lesson-info td {
+  text-align: center;
+}
+#lesson-info th {
+  padding: 10px 20px;
+}
+#lesson-info td {
+  padding: 10px 20px;
+  border-right: 1px solid rgba(0, 0, 0, .05);
+}
+#lesson-info td:last-child {
+  border-right: none;
+}
+.past {
+  opacity: 0.7;
+}
+.email-plan {
+  cursor: pointer;
+}
+.standard-button {
+  background: #3fa9f5;
+  float: right;
+  color: white;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+}
+.this-week-time {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  color: white;
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  text-transform: lowercase;
+}
+/*TEXT EDITOR*/textarea {
+  width: 100%;
+  height: 200px;
+  background: white;
+}
+.stage > div, .niceEdit-wrapper > div {
+  border: 1px solid #3fa9f5 !important;
+  background: white;
+}
+.stage button {
+  position: absolute;
+  left: 102%;
+  padding: 10px 15px;
+  top: 25px;
+}
+.english-and-maths {
+  background: yellow;
+}
+.equality-and-diversity {
+  background: greenyellow;
+}
+.learning-and-progress {
+  background: cyan;
+}
+.nicEdit-panelContain {
+  background-color: #3fa9f5 !important;
+  padding: 5px;
+}
+.nicEdit-button {
+  padding: 5px;
+}
+.nicEdit-button-undefined {
+  background: none !important;
+  border: none !important;
+}
+.nicEdit-main {
+  background: white;
+}
+.nicEdit-selected {
+  outline: none;
+}
+label {
+  display: inline-block;
+  width: 175px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1220px) {
+  label {
+    width: 135px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  label {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+label[for='notes'] {
+  width: 100%;
+  margin-top: 20px;
+}
+.lesson-creator input, select, .search-sidebar input {
+  width: 295px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1220px) {
+  .lesson-creator input, select, .search-sidebar input {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .lesson-creator input, select, .search-sidebar input {
+    width: 100%;
+  }
+}
+.fa-edit, .fa-plus {
+  color: #3fa9f5;
+  font-size: 24px;
+}
+table .fa-close {
+  color: #ff1d25;
+  font-size: 24px;
+}
+table .fa-check {
+  color: #7ac943;
+  font-size: 24px;
+}
+button {
+  background-color: #3fa9f5;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+}
+.edit-class-button {
+  float: right;
+  cursor: pointer;
+}
+.stage {
+  position: relative;
+  z-index: 99;
+}
+.stage:nth-child(2n):before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
+  background: #f2f2f2;
+}
+.download-button, .save-button {
+  padding: 10px 20px;
+  background: #3fa9f5;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  height: 42px !important;
+  width: 100% !important;
+  border: none;
+  display: inline-block;
+}
+.download-button {
+  margin-top: 0px;
+}
+.plus {
+  margin-top: 20px;
+}
+/*SUGGESTION BOX*/.help-circle {
+  color: #3fa9f5;
+  font-size: 26px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.add-suggestion {
+  background: white;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  color: #2b2b2b;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: 'Ubuntu';
+  transition: 0.3s all;
+  font-size: 15px;
+}
+.add-suggestion.selected {
+  background: #2e89ca;
+  color: white;
+}
+.helper, .objectives-helper {
+  display: inline-block;
+  color: white;
+  background: transparent !important;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+  top: 50px;
+  left: 205px;
+}
+@media screen and (max-width: 1220px) {
+  .helper, .objectives-helper {
+    left: 155px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .helper, .objectives-helper {
+    left: 230px;
+    top: 30px;
+  }
+}
+.objectives-helper {
+  top: 32px;
+  left: 375px;
+}
+@media screen and (max-width: 1220px) {
+  .objectives-helper {
+    left: 300px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .objectives-helper {
+    left: 240px;
+  }
+}
+input[name=private] {
+  width: auto;
+  height: auto;
+}
+.blue-button {
+  display: inline-block;
+  padding: 5px 20px;
+  background: #3fa9f5;
+  color: white;
+  margin: 5px;
+  float: right;
+}
+/*SEARCH PAGE*/.search-box, .this-week-box {
+  height: 60px;
+}
+.written-by {
+  font-size: 11px;
+  color: white;
+  opacity: 0.7;
+  padding-bottom: 20px;
+}
+.search-unit {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.search-box-switch {
+  top: 20px;
+}
+.search-class {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.search-date {
+  font-size: 12px;
+  opacity: 0.8;
+  float: right;
+  margin-top: -15px;
+}
+#search-bar {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+#search-bar:active {
+  border: 1px solid #3fa9f5;
+}
+/* ==========================================================================
+ Media Queries
+ ========================================================================== */@media print {
+  nav, a, input[type=submit], input[type=checkbox], label[for=private] {
+    display: none;
+  }
+  section.sidebar {
+    margin-left: 0px;
+    width: 100%;
+  }
+  label {
+    padding-left: 20px;
+  }
+  main {
+    margin-left: 40px;
+  }
+}
+/* ==========================================================================
+ Helper classes
+ ========================================================================== */.hidden {
+  visibility: hidden;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* ==========================================================================
+ Print styles
+ ========================================================================== */@media print {
+  *, *:before, *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after, a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

@@ -1,0 +1,110 @@
+/*TEXT EDITOR*/textarea {
+  width: 100%;
+  height: 200px;
+  background: white;
+}
+.stage > div, .niceEdit-wrapper > div {
+  border: 1px solid $brandColor !important;
+  background: white;
+}
+.stage button {
+  position: absolute;
+  left: 102%;
+  padding: 10px 15px;
+  top: 25px;
+}
+.english-and-maths {
+  background: yellow;
+}
+.equality-and-diversity {
+  background: greenyellow;
+}
+.learning-and-progress {
+  background: cyan;
+}
+.nicEdit-panelContain {
+  background-color: $brandColor !important;
+  padding: 5px;
+}
+.nicEdit-button {
+  padding: 5px;
+}
+.nicEdit-button-undefined {
+  background: none !important;
+  border: none !important;
+}
+.nicEdit-main {
+  background: white;
+}
+.nicEdit-selected {
+  outline: none;
+}
+label {
+  display: inline-block;
+  width: 175px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+label[for='notes'] {
+  width: 100%;
+  margin-top: 20px;
+}
+.lesson-creator input, select, input[type=password], .search-sidebar input {
+  width: 295px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.fa-edit, .fa-plus {
+  color: $brandColor;
+  font-size: 24px;
+}
+table .fa-close {
+  color: #ff1d25;
+  font-size: 24px;
+}
+table .fa-check {
+  color: #7ac943;
+  font-size: 24px;
+}
+button {
+  background-color: $brandColor;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+}
+.edit-class-button {
+  float: right;
+  cursor: pointer;
+}
+.stage {
+  position: relative;
+  z-index: 99;
+}
+.stage:nth-child(2n):before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
+  background: #f2f2f2;
+}
+.download-button, .save-button {
+  padding: 10px 20px;
+  background: $brandColor;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  height: 42px !important;
+  width: 100% !important;
+  border: none;
+  display: inline-block;
+}
+.download-button {
+  margin-top: 0px;
+}
+.plus {
+  margin-top: 20px;
+}
